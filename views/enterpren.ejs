@@ -1,0 +1,19 @@
+<% layout('layouts/boilerplate')%>
+
+<h1 style="font-family: sans-serif;padding-top: 1cm;">Articles about Enterpreneurship</h1>
+
+<div>
+  <% const urls = ['https://garyvaynerchuk.com/reframing-the-narrative-on-entrepreneurship/','https://entrepreneurshandbook.co/netflixs-co-founder-has-5-pieces-of-advice-for-aspiring-entrepreneurs-97255228d778','https://medium.com/i-m-h-o/good-and-bad-reasons-to-become-an-entrepreneur-decf0766de8d','https://www.jotform.com/blog/do-not-become-an-entrepreneur/'] %>
+  <% let id=-1 %>  
+  <% for (let i of data) {%>
+      <% id+=1 %>
+    <div class="card">
+      <h5 class="card-header">Featured</h5>
+      <div class="card-body">
+        <h5 class="card-title"><%= i %></h5>
+        <a class="btn btn-primary" href="/enterpren/<%=id%>">Read Article</a>
+      </div>
+    </div>
+    <br>
+    <% } %>
+</div>
